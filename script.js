@@ -5,6 +5,8 @@ const list = document.getElementById('list');
 const form = document.getElementById('form');
 const text = document.getElementById('text');
 const amount = document.getElementById('amount');
+const date=document.getElementById('date');
+
 
 
 
@@ -19,13 +21,16 @@ let transactions =
 function addTransaction(e) {
   e.preventDefault();
 
-  if (text.value.trim() === '' || amount.value.trim() === '') {
+  if (text.value.trim() === '' || amount.value.trim() === ''||date.value.trim() === '') {
     alert('Please add a text and amount');
   } else {
     const transaction = {
       id: generateID(),
       text: text.value,
-      amount: +amount.value
+      amount: +amount.value,
+      date: date.value,
+      
+ 
     };
 
     transactions.push(transaction);
@@ -38,6 +43,10 @@ function addTransaction(e) {
 
     text.value = '';
     amount.value = '';
+    date.value = '';
+    
+    // GetTime(new Date());
+    
   }
 }
 
@@ -57,7 +66,8 @@ function addTransactionDOM(transaction) {
   item.classList.add(transaction.amount < 0 ? 'minus' : 'plus');
 
   item.innerHTML = `
-    ${transaction.text} <span>${sign}${Math.abs(
+  ${transaction.date}  ${transaction.text}  
+   <span> ${sign}${Math.abs(
     transaction.amount
   )}</span> <button class="delete-btn" onclick="removeTransaction(${
     transaction.id
@@ -86,6 +96,8 @@ function updateValues() {
   balance.innerText = `$${total}`;
   money_plus.innerText = `$${income}`;
   money_minus.innerText = `$${expense}`;
+  
+
 }
 
 // Remove transaction by ID
@@ -113,3 +125,5 @@ function init() {
 init();
 
 form.addEventListener('submit', addTransaction);
+
+
