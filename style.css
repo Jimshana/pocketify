@@ -10,7 +10,7 @@
 
 body {
   background-color: #f7f7f7;
-  background: url(https://is2-ssl.mzstatic.com/image/thumb/Purple124/v4/c0/5c/ed/c05ced05-4fa2-a20f-2bab-98b19ecab04f/source/512x512bb.jpg);
+  background: url(https://previews.123rf.com/images/suyujung/suyujung1708/suyujung170800009/84487563-business-finance-savings-or-loan-background-concept-pen-calculator-and-savings-account-passbook.jpg);
   background-position: center;
   background-size: cover;
   display: flex;
@@ -24,7 +24,7 @@ body {
 
 .container {
   margin: 30px auto;
-  width: 350px;
+  width: 320px;
 }
 
 h1 {
@@ -46,7 +46,7 @@ h4 {
 .inc-exp-container {
   background-color: white;
   box-shadow: var(--box-shadow);
-  padding: 20px;
+  padding: 5px;
   display: flex;
   justify-content: space-between;
   margin: 20px 0;
